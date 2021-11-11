@@ -11,6 +11,7 @@ o = {
 console.log(o);
 o.hello();
 
+// It works with the abbreviated syntax
 o = {
   property,
   hello
