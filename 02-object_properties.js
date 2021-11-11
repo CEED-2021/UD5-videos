@@ -27,3 +27,6 @@ o = {
 o.hello();
 o.moreHello();
 
+// We can delete properties
+delete o.moreHello
+console.log(o)
