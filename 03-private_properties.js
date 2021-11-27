@@ -7,7 +7,7 @@ console.log('-----------------------------------------------------')
 class PrivateV1 {
 
   _discount = 0.1;
-  
+
   constructor(initialPrice) {
     this._price = initialPrice || 0;
   }
@@ -16,9 +16,9 @@ class PrivateV1 {
     return true;
   }
 
-  get price() { 
+  get price() {
     const discount = this._isGoodClient() ? this._discount : 0
-    return this._price * (1 - discount) 
+    return this._price * (1 - discount)
   }
 }
 
@@ -42,7 +42,7 @@ class PrivateV2 {
 
   #discount = 0.1;
   #price
-  
+
   constructor(initialPrice) {
     this.#price = initialPrice || 0;
   }
@@ -51,9 +51,9 @@ class PrivateV2 {
     return true;
   }
 
-  get price() { 
+  get price() {
     const discount = this.#isGoodClient() ? this.#discount : 0
-    return this.#price * (1 - discount) 
+    return this.#price * (1 - discount)
   }
 }
 
@@ -63,6 +63,9 @@ console.log(o.price)
 console.log('-----------------------------------------------------')
 console.log('Now the properties are private')
 console.log('-----------------------------------------------------')
+
+console.log(o['#price'])
+console.log(o['#discount'])
 
 // This will generate syntax errors:
 //console.log(o.#price)
