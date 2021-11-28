@@ -9,10 +9,10 @@ class Person {
   }
 
   get age() { return this._age }
-  set age(age) {
-    if (age < 0) throw "The person must have born";
-    if (age > 150) throw "I don't believe it";
-    this._age = age;
+  set age(newAge) {
+    if (newAge < 0) throw "The person must have been born";
+    if (newAge > 150) throw "I don't believe it";
+    this._age = newAge;
   }
 }
 
