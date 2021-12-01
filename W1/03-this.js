@@ -118,7 +118,7 @@ o = {
   whoami: "This time I'll be o",
   a
 }
-// callLater(o.a) // This won't keep "this"
+// callLater(o.a) // This will keep "this"
 callLater(o.a.bind(o))
 
 // We can use this for callbacks:
